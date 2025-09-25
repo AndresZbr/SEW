@@ -11,7 +11,7 @@
         <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
     </head>
     <body>
-        <h1>Somkiat Chantra</h1>
+        <h2>Somkiat Chantra</h2>
         
         <nav>
             <a href="index.html" title="Inicio de MotoGP-Desktop">Inicio</a>
@@ -29,11 +29,15 @@
         Moto2 European Championship en 2017 y 2018.</p>
 
         <picture>
-            <source media="max-width: 499px" srcset="multimedia/Somkiat Chantra Foto.jpg">
-            <img src="multimedia/Somkiat Chantra Foto.jpg" alt="Foto de Somkiat Chantra" />
+            <!-- Imagen para pantallas pequeñas (menos de 466px) -->
+            <source media="max-width: 465px" srcset="multimedia/Somkiat Chantra Pequena.jpg">
+            <!-- Imagen para pantallas medianas (menos de 799px) -->
+            <source media="max-width: 799px" srcset="multimedia/Somkiat Chantra Mediana.jpg">
+            <!-- Imagen para pantallas grandes (mas de 800px) -->
+            <source media="min-width: 800px" srcset="multimedia/Somkiat Chantra Grande.jpg">
+
         </picture>
 
-        <h2>Datos del piloto</h2>
         <ul>
             <li>Fecha de nacimiento: 7 de marzo de 1996</li>
             <li>Lugar de nacimiento: Chon Buri, Thailand</li>
