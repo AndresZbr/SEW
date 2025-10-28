@@ -1,0 +1,40 @@
+<!ELEMENT circuito (nombre, longitud, anchura, fecha, hora, vueltas, 
+    localidad, pais, patrocinador, referencias, galeriaFotos, galeriaVideos,
+    puntoOrigen, tramos, vencedor, clasificacion)>
+<!ELEMENT nombre (#PCDATA)>
+<!ELEMENT longitud (#PCDATA)>
+<!ATTLIST longitud unidad CDATA #REQUIRED>
+<!ELEMENT anchura (#PCDATA)>
+<!ATTLIST anchura unidad CDATA #REQUIRED>
+<!ELEMENT fecha (#PCDATA)>
+<!ELEMENT hora (#PCDATA)>
+<!ELEMENT vueltas (#PCDATA)>
+<!ELEMENT localidad (#PCDATA)>
+<!ELEMENT pais (#PCDATA)>
+<!ELEMENT patrocinador (#PCDATA)>
+
+<!ELEMENT referencias (referencia, referencia, referencia)>
+<!ELEMENT referencia (#PCDATA)>
+
+<!ELEMENT galeriaFotos (foto+)>
+<!ELEMENT foto (#PCDATA)>
+
+<!ELEMENT galeriaVideos (video+)>
+<!ELEMENT video (#PCDATA)>
+
+<!ELEMENT puntoOrigen (latitudC, longitudC, altitudC)>
+<!ELEMENT longitudC (#PCDATA)>
+<!ELEMENT latitudC (#PCDATA)>
+<!ELEMENT altitudC (#PCDATA)>
+
+<!ELEMENT tramos (tramo+)>
+<!ELEMENT tramo (distancia, longitudC, latitudC, altitudC, sector)>
+<!ATTLIST tramo id CDATA #REQUIRED>
+<!ELEMENT distancia (#PCDATA)>
+<!ELEMENT sector (#PCDATA)>
+
+<!ELEMENT vencedor (nombre, tiempo)>
+<!ELEMENT tiempo (#PCDATA)>
+
+<!ELEMENT clasificacion (piloto, piloto, piloto)>
+<!ELEMENT piloto (#PCDATA)>

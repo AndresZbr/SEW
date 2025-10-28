@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE circuito SYSTEM "circuito.dtd">
+<circuito>
+  <nombre>MotorLand Aragón</nombre>
+  <longitud unidad="metros">4.655</longitud>
+  <anchura unidad="metros">15</anchura>
+  <fecha>2025-09-21</fecha>
+  <hora>14:00</hora>
+  <vueltas>23</vueltas>
+  <localidad>Alcañiz</localidad>
+  <pais>España</pais>
+  <patrocinador>GoPro</patrocinador>
+
+  <referencias>
+    <referencia>https://es.wikipedia.org/wiki/MotorLand_Aragón</referencia>
+    <referencia>
+      https://www.motogp.com/en/calendar/2025/event/spain/4e4f2356-d5de-43c8-ac94-39af7e7077f9?tab=overview</referencia>
+    <referencia>https://www.motorlandaragon.com/es</referencia>
+  </referencias>
+
+  <galeriaFotos>
+    <foto>multimedia/Motorland_Aragon_1.jpg</foto>
+    <foto>multimedia/Motorland_Aragon_2.jpg</foto>
+  </galeriaFotos>
+
+  <galeriaVideos>
+    <video>multimedia/Best_MotoGP</video>
+  </galeriaVideos>
+
+  <puntoOrigen>
+    <latitudC>41.051667</latitudC>
+    <longitudC>-0.123056</longitudC>
+    <altitudC>430</altitudC>
+  </puntoOrigen>
+
+  <tramos>
+    <tramo id="1">
+      <distancia>250</distancia>
+      <longitudC>-0.200260</longitudC>
+      <latitudC>41.079732</latitudC>
+      <altitudC>346</altitudC>
+      <sector>1</sector>
+    </tramo>
+    <tramo id="2">
+      <distancia>250</distancia>
+      <longitudC>-0.201828</longitudC>
+      <latitudC>41.078696</latitudC>
+      <altitudC>347</altitudC>
+      <sector>1</sector>
+    </tramo>
+    <tramo id="3">
+      <distancia>250</distancia>
+      <longitudC>-0.204811</longitudC>
+      <latitudC>41.079360</latitudC>
+      <altitudC>348</altitudC>
+      <sector>1</sector>
+    </tramo>
+    <tramo id="4">
+      <distancia>250</distancia>
+      <longitudC>-0.205502</longitudC>
+      <latitudC>41.081783</latitudC>
+      <altitudC>349</altitudC>
+      <sector>1</sector>
+    </tramo>
+    <tramo id="5">
+      <distancia>250</distancia>
+      <longitudC>-0.206998</longitudC>
+      <latitudC>41.082534</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+    <tramo id="6">
+      <distancia>250</distancia>
+      <longitudC>-0.207649</longitudC>
+      <latitudC>41.081133</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+    <tramo id="7">
+      <distancia>250</distancia>
+      <longitudC>-0.209912</longitudC>
+      <latitudC>41.080049</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+    <tramo id="8">
+      <distancia>250</distancia>
+      <longitudC>-0.210621</longitudC>
+      <latitudC>41.083141</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+    <tramo id="9">
+      <distancia>250</distancia>
+      <longitudC>-0.209845</longitudC>
+      <latitudC>41.083589</latitudC>
+      <altitudC>347</altitudC>
+      <sector>2</sector>
+    </tramo>
+    <tramo id="10">
+      <distancia>250</distancia>
+      <longitudC>-0.212059</longitudC>
+      <latitudC>41.084167</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+    <tramo id="11">
+      <distancia>250</distancia>
+      <longitudC>-0.212459</longitudC>
+      <latitudC>41.081116</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+    <tramo id="12">
+      <distancia>250</distancia>
+      <longitudC>-0.210549</longitudC>
+      <latitudC>41.078891</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+    <tramo id="13">
+      <distancia>250</distancia>
+      <longitudC>-0.208638</longitudC>
+      <latitudC>41.079408</latitudC>
+      <altitudC>348</altitudC>
+      <sector>3</sector>
+    </tramo>
+    <tramo id="14">
+      <distancia>250</distancia>
+      <longitudC>-0.206492</longitudC>
+      <latitudC>41.078244</latitudC>
+      <altitudC>348</altitudC>
+      <sector>4</sector>
+    </tramo>
+    <tramo id="15">
+      <distancia>250</distancia>
+      <longitudC>-0.206812</longitudC>
+      <latitudC>41.077375</latitudC>
+      <altitudC>348</altitudC>
+      <sector>4</sector>
+    </tramo>
+    <tramo id="16">
+      <distancia>250</distancia>
+      <longitudC>-0.194153</longitudC>
+      <latitudC>41.075969</latitudC>
+      <altitudC>348</altitudC>
+      <sector>4</sector>
+    </tramo>
+    <tramo id="17">
+      <distancia>250</distancia>
+      <longitudC>-0.194614</longitudC>
+      <latitudC>41.074478</latitudC>
+      <altitudC>349</altitudC>
+      <sector>4</sector>
+    </tramo>
+  </tramos>
+
+  <vencedor>
+    <nombre>Marc Márquez</nombre>
+    <tiempo>00:42:15</tiempo>
+  </vencedor>
+
+  <clasificacion>
+    <piloto>Marc Márquez</piloto>
+    <piloto>Alex Márquez</piloto>
+    <piloto>Fracesco Bagnaia</piloto>
+  </clasificacion>
+
+</circuito>

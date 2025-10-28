@@ -1,0 +1,10 @@
+<?xml version='1.0' encoding='utf-8'?>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2567" height="466">
+  <rect x="0" y="0" width="2567" height="466" fill="white" stroke="black" stroke-width="1" />
+  <line x1="30" y1="30" x2="30" y2="436" stroke="black" stroke-width="2" />
+  <line x1="30" y1="436" x2="2537" y2="436" stroke="black" stroke-width="2" />
+  <polyline points="30.0,66.97000000000003 177.5,63.19999999999999 325.0,63.620000000000005 472.5,53.98000000000002 620.0,38.81999999999999 767.5,42.14999999999998 915.0,31.120000000000005 1062.5,29.120000000000005 1210.0,37.97000000000003 1357.5,44.579999999999984 1505.0,52.089999999999975 1652.5,44.93000000000001 1800.0,43.44 1947.5,38.93000000000001 2095.0,54.97000000000003 2242.5,57.860000000000014 2390.0,76.17000000000002 2537.5,71.18 2537,436 30,436" stroke="red" stroke-width="2" fill="lightblue" />
+  <text x="30" y="20" fill="black" style="font-size:24px; font-weight:bold">Altimetría del circuito: MotorLand Aragón</text>
+  <text x="1283.5" y="456" fill="black" style="font-size:18px; text-anchor:middle">Distancia (m)</text>
+  <text x="15" y="233.0" fill="black" style="font-size:18px; writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
+</svg>

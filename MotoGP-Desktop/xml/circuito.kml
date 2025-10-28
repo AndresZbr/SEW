@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document>
+  <name>MotorLand Aragón</name>
+  <Style id='lineaRoja'>
+    <LineStyle>
+      <color>ff0000ff</color>
+      <width>5</width>
+    </LineStyle>
+  </Style>
+  <Placemark>
+    <name>Ruta del circuito</name>
+    <styleUrl>#lineaRoja</styleUrl>
+    <LineString>
+      <extrude>1</extrude>
+      <tessellate>1</tessellate>
+      <altitudeMode>clampToGround</altitudeMode>
+      <coordinates>
+        -0.198080,41.078459,369.03
+        -0.200260,41.079732,372.8
+        -0.201828,41.078696,372.38
+        -0.204811,41.079360,382.02
+        -0.205502,41.081783,397.18
+        -0.206998,41.082534,393.85
+        -0.207649,41.081133,404.88
+        -0.209912,41.080049,406.88
+        -0.210621,41.083141,398.03
+        -0.209845,41.083589,391.42
+        -0.212059,41.084167,383.91
+        -0.212459,41.081116,391.07
+        -0.210549,41.078891,392.56
+        -0.208638,41.079408,397.07
+        -0.206492,41.078244,381.03
+        -0.206812,41.077375,378.14
+        -0.194614,41.074478,359.83
+        -0.194153,41.075969,364.82
+        -0.198080,41.078459,369.03
+      </coordinates>
+    </LineString>
+  </Placemark>
+</Document>
+</kml>
