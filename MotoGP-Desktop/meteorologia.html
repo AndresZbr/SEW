@@ -1,51 +1,71 @@
-<!DOCTYPE HTML>
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-    <meta charset="UTF-8" />
-    <title>MotoGP-metodologia</title>
+    <meta charset="utf-8" />
+    <title>MotoGP Meteorología</title>
     <meta name="author" content="Andres Zhou Blanco Rodriguez" />
-    <meta name="description" content="Información metodologia de MotoGP-Desktop" />
-    <meta name="keywords" content="aquí cada documento debe tener la lista
-            de las palabras clave del mismo separadas por comas" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-    <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-    <link rel="icon" type="image/x-icon" href="multimedia/favicon.ico" />
+    <link rel="stylesheet" href="estilo/estilo.css" />
+    <link rel="stylesheet" href="estilo/layout.css" />
+    <link rel="icon" href="multimedia/favicon.ico" type="image/x-icon" />
 
-    <script src="js/ciudad.js"></script>
+    <!-- jQuery (solo si lo necesitas en otras páginas) -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous">
+        </script>
+
+    <!-- Clase Ciudad -->
+    <script src="js/ciudad.js" defer></script>
 </head>
 
 <body>
     <header>
-        <h1><a href="index.html" title="Ir a la pagina principal">MotoGP Desktop</a></h1>
+        <h1><a href="index.html" title="Ir a la página principal">MotoGP Desktop</a></h1>
         <nav>
             <a href="index.html" title="Inicio de MotoGP-Desktop">Inicio</a>
             <a href="piloto.html" title="Información del piloto">Piloto</a>
             <a href="circuito.html" title="Información del circuito">Circuito</a>
-            <a href="meteorologia.html" title="Meteorología del proyecto" class="active">Meteorología</a>
+            <a href="meteorologia.html" class="active" title="Meteorología de MotoGP-Desktop">Meteorología</a>
             <a href="clasificaciones.html" title="Clasificaciones de MotoGP-Desktop">Clasificaciones</a>
             <a href="juegos.html" title="Juegos de MotoGP-Desktop">Juegos</a>
             <a href="ayuda.html" title="Ayuda de MotoGP-Desktop">Ayuda</a>
         </nav>
     </header>
 
-    <p class="migas">Estás en: <a href="index.html">Inicio</a> &gt;&gt; Meteorología</p>
-    <h2>Meteorología de MotoGP-Desktop</h2>
+    <main>
+        <p class="migas">
+            Estás en: <a href="index.html">Inicio</a> &gt;&gt; <strong>Meteorología</strong>
+        </p>
+        <h2>Meteorología</h2>
 
-    <script>
-        // Crear una instancia de la clase Ciudad (Teruel)
-        const teruel = new Ciudad("Teruel", "España", "turolense");
+    </main>
 
-        // Rellenar los demás datos (valores reales de ejemplo)
-        teruel.rellenarDatos(135743, [40.3450126, -1.1056599, 913.9534353]);
+    <!-- Script principal -->
+    <script defer>
+        document.addEventListener("DOMContentLoaded", () => {
+            const main = document.querySelector("main");
 
-        // Mostrar resultados en el documento
-        document.write(`<h3>${teruel.obtenerNombreCiudad()}</h3>`);
-        document.write(`<p>País: ${teruel.obtenerNombrePais()}</p>`);
-        document.write(teruel.obtenerInfoSecundaria());
-        teruel.mostrarCoordenadas();
+            // Crear sections dinámicamente
+            const infoCiudad = document.createElement("section");
+            const meteorologiaCarrera = document.createElement("section");
+            const meteorologiaEntrenos = document.createElement("section");
+
+            main.append(infoCiudad, meteorologiaCarrera, meteorologiaEntrenos);
+
+            const teruel = new Ciudad("Teruel", "España", "turolense");
+            teruel.rellenarDatos(135743, [40.3450126, -1.1056599, 913.95]);
+
+            // Mostrar información
+            infoCiudad.appendChild(teruel.crearInfoHTML());
+
+            // Mostrar meteorología del día de la carrera
+            teruel.getMeteorologiaCarrera("2025-06-07", meteorologiaCarrera);
+
+            // Mostrar meteorología de entrenamientos
+            teruel.getMeteorologiaEntrenos("2025-06-04", "2025-06-06", meteorologiaEntrenos);
+        });
     </script>
 </body>
 

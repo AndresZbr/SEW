@@ -1,30 +1,36 @@
-/* layout.css */
+/*
+Andres Zhou Blanco Rodriguez
+UO300351
+*/
+
+/* Layout generales del proyecto MotoGP-Desktop */
 
 /* Especificidad = 001 */
 header {
     display: flex;
-    justify-content: space-between; /* separa h1 y nav a extremos */
-    align-items: center;           /* centra verticalmente */
-    gap: 1rem;                     /* espacio entre h1 y nav */
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 0.5rem;
 }
 
 /* Especificidad = 001 */
 nav {
     display: flex;
-    gap: 0.75rem;                /* espacio entre enlaces */
-    justify-content: flex-end;   /* alinea los enlaces a la derecha */
+    gap: 0.75rem;
+    justify-content: flex-end;
 }
 
 /* Especificidad = 001 */
-Video,audio {
-    width:100%;
-    height:auto;
+video,
+audio {
+    width: 100%;
+    height: auto;
 }
 
 /* Especificidad = 001 */
 img {
-    max-width:100%;
-    height:auto;
+    max-width: 100%;
+    height: auto;
 }
 
 /* ------------------------------- */
@@ -32,28 +38,45 @@ img {
 /* ------------------------------- */
 @media (min-width: 320px) and (max-width: 799px) {
 
-    /* Se redefinen flex-direction y align-items para header */
+    /* Especificidad = 001 
+       Se redefinen flex-direction y align-items 
+       Se redefine align-items */
     header {
         flex-direction: column;
         align-items: center;
     }
 
-    /* Se redefinen flex-direction, justify-content y align-items para nav */
+    /* Especificidad = 001 
+       Se redefinen flex-direction, justify-content y align-items
+       Se redefine justify-content */
     nav {
         flex-direction: column;
         justify-content: center;
         align-items: center;
     }
 
-    /* Se redefine display para ocultar las migas de navegación */
+    /* Especificidad = 002
+       Se redefine display */
     main > p:first-of-type {
         display: none;
     }
 
-    /* Ajuste de tamaño de elementos multimedia */
+    /* Especificidad = 002
+       Se redefinen width y height
+       Se redefine width
+       Se redefine height */
     video,
     audio {
         width: 100%;
         height: auto;
+    }
+
+    /* Especificidad = 002
+       Se redefinen width, height y display */
+    article h2 + img {
+        width: 100%;     
+        height: auto;    
+        display: block;  
+        margin: 0 auto; 
     }
 }

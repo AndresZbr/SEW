@@ -18,41 +18,41 @@ header {
     color: #ffffff;
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 h1 a {
     color: #ffffff;
-    
 }
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 a {
     color: #acc9ff;
     text-decoration-line: none;
-    
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 nav a {
     color: #ffffff;
     text-decoration-line: none;
-    
 }
 
-/* Especificidad = 010 */
+/* Especificidad = 010 
+   Se hereda el color de fondo */
 .active {
     color: #ffec8b;
     font-weight: bold;
-    
 }
 
-/* Especificidad = 004 */
+/* Especificidad = 004 
+   Se hereda el color de fondo */
 body > main > p > strong {
     color: #ff4d4d;
     font-size: 1.5rem;
     font-family: 'Segoe UI', sans-serif;
     line-height: 1.5;
     font-weight: bold;
-    
 }
 
 /* ------------------------------------------------------------------------------------------- */
@@ -75,7 +75,8 @@ body {
 /* Encabezados principales  */
 /* ===================================== */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -84,7 +85,8 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 h2 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -93,7 +95,8 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -106,14 +109,16 @@ h3 {
 /*      Texto general y listas    */
 /* ===================================== */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 p {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 figcaption {
     font-size: 0.875rem;
     font-style: italic;
@@ -125,34 +130,38 @@ figcaption {
 /*   Listas no ordenadas (UL)  */
 /* ===================================== */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 ul {
-    list-style-type: square;  /* viñetas cuadradas */
-    margin-left: 1.5rem;      /* sangría */
+    list-style-type: square;
+    margin-left: 1.5rem;
     font-size: 1rem;
     line-height: 1.5;
     padding-left: 1rem;
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 ul li {
-    margin-bottom: 0.5rem;    /* espacio entre elementos */
+    margin-bottom: 0.5rem;
 }
 
 /* ===================================== */
 /*     Listas ordenadas (OL)     */
 /* ===================================== */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de fondo */
 ol {
-    list-style-type: upper-roman; /* I, II, III, IV... */
+    list-style-type: upper-roman;
     margin-left: 1.5rem;
     font-size: 1.125rem;
     line-height: 1.6;
     padding-left: 1rem;
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 ol li {
     margin-bottom: 0.75rem;
     font-weight: 500;
@@ -162,15 +171,17 @@ ol li {
 /*   Listas anidadas (UL u OL dentro)  */
 /* ===================================== */
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 ul ul, ol ol, ul ol, ol ul {
-    list-style-type: circle; /* viñetas circulares */
+    list-style-type: circle;
     font-size: 0.95rem;
-    margin-left: 1.5rem;     /* sangría */
+    margin-left: 1.5rem;
     padding-left: 1rem;
 }
 
-/* Especificidad = 003 */
+/* Especificidad = 003 
+   Se hereda el color de fondo */
 ul ul li, ol ol li {
     margin-bottom: 0.4rem;
 }
@@ -179,31 +190,31 @@ ul ul li, ol ol li {
 /*   Estilos para listas de definición   */
 /* ===================================== */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de primer plano */
 dl {
-    background-color: #2a2a40;        /* fondo contrastado con el general (#22223b) */
-    border-radius: 0.5rem;            /* bordes redondeados para suavizar */
+    background-color: #2a2a40;
+    border-radius: 0.5rem;
     padding: 1rem 1.5rem;
     margin: 1.5rem 0;
-    
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 dl dt {
-    color: #ffec8b;                   /* amarillo suave para destacar el término */
+    color: #ffec8b;
     font-size: 1.125rem;
     font-weight: 600;
     margin-top: 0.75rem;
-    
 }
 
 /* Especificidad = 002 */
 dl dd {
-    color: #ffffff;                   /* blanco normal para la descripción */
-    background-color: #b8001f;        /* fondo rojo corporativo */
+    color: #ffffff;
+    background-color: #b8001f;
     font-size: 1rem;
     line-height: 1.5;
-    margin: 0.25rem 0 0.75rem 1rem;   /* sangría */
+    margin: 0.25rem 0 0.75rem 1rem;
     padding: 0.5rem 0.75rem;
     border-radius: 0.25rem;
 }
@@ -212,19 +223,20 @@ dl dd {
 /*         Estilo para tablas       */
 /* ================================ */
 
-/* Especificidad = 001 */
+/* Especificidad = 001 
+   Se hereda el color de primer plano */
 table {
     width: 100%;
-    border-collapse: collapse;          /* para que los bordes se vean como una sola línea */
+    border-collapse: collapse;
     margin: 1.5rem 0;
-    background-color: #2a2a40;         /* fondo oscuro que contraste */
+    background-color: #2a2a40;
     border-radius: 0.5rem;
-    overflow: hidden;                   /* por si hay esquinas redondeadas */
+    overflow: hidden;
     font-size: 1rem;
-    
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de fondo */
 table caption {
     caption-side: top;
     text-align: left;
@@ -232,49 +244,50 @@ table caption {
     padding: 0.5rem 0;
     color: #ffffff;
     font-size: 1.125rem;
-    
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de primer plano */
 table th {
-    background-color: #b8001f;        /* rojo corporativo */
-    color: #ffffff;                   /* amarillo suave para contraste */
+    background-color: #b8001f;
+    color: #ffffff;
     text-align: left;
-    border-bottom: 2px solid #444;    /* línea divisoria */
+    border-bottom: 2px solid #444;
     padding: 0.75rem;
     font-weight: 600;
-    
 }
 
-/* Especificidad = 002 */
+/* Especificidad = 002 
+   Se hereda el color de primer plano */
 table td {
     padding: 0.75rem;
     color: #ffffff;
     background-color: #33334d;
     border-top: 1px solid #444;
-    overflow: hidden;                   /* por si hay esquinas redondeadas */
+    overflow: hidden;
 }
 
 /* ====================================================== */
 /*   Estructura alternativa de tabla en pantallas pequeñas */
 /* ====================================================== */
 
-/* Redefiniciones permitidas — para estructura para móviles */
-/* Redefinición de display, padding y estructura para adaptabilidad */
 @media (max-width: 799px) {
 
-    /* Especificidad = 001 */
+    /* Especificidad = 001 
+       Se redefine display y width */
     table, thead, tbody, th, td, tr {
         display: block;
         width: 100%;
     }
 
-    /* Especificidad = 001 */
+    /* Especificidad = 001 
+       Se redefine display */
     thead {
         display: none;
     }
 
-    /* Especificidad = 001 */
+    /* Especificidad = 001 
+       Se redefine margin-bottom, border, border-radius, background-color y padding */
     table tr {
         margin-bottom: 1rem;
         border: 1px solid #444;
@@ -283,7 +296,8 @@ table td {
         padding: 0.5rem;
     }
 
-    /* Especificidad = 001 */
+    /* Especificidad = 001 
+       Se redefine display, justify-content, align-items, padding y border */
     table td {
         display: flex;
         justify-content: space-between;
@@ -292,11 +306,11 @@ table td {
         border: none;
     }
 
-    /* Especificidad = 003 */
+    /* Especificidad = 003
+       Se hereda el color de fondo */
     table td::before {
         content: attr(data-label);
         font-weight: 600;
         color: #ffec8b;
-        
     }
 }
