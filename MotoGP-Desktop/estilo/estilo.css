@@ -18,6 +18,11 @@ header {
     color: #ffffff;
 }
 
+header>button[aria-haspopup] {
+    background: #f8f8f8;
+    color: inherit;
+}
+
 /* Especificidad = 002 
    Se hereda el color de fondo */
 h1 a {
@@ -47,7 +52,7 @@ nav a {
 
 /* Especificidad = 004 
    Se hereda el color de fondo */
-body > main > p > strong {
+body>main>p>strong {
     color: #ff4d4d;
     font-size: 1.5rem;
     font-family: 'Segoe UI', sans-serif;
@@ -173,7 +178,10 @@ ol li {
 
 /* Especificidad = 002 
    Se hereda el color de fondo */
-ul ul, ol ol, ul ol, ol ul {
+ul ul,
+ol ol,
+ul ol,
+ol ul {
     list-style-type: circle;
     font-size: 0.95rem;
     margin-left: 1.5rem;
@@ -182,7 +190,8 @@ ul ul, ol ol, ul ol, ol ul {
 
 /* Especificidad = 003 
    Se hereda el color de fondo */
-ul ul li, ol ol li {
+ul ul li,
+ol ol li {
     margin-bottom: 0.4rem;
 }
 
@@ -275,7 +284,12 @@ table td {
 
     /* Especificidad = 001 
        Se redefine display y width */
-    table, thead, tbody, th, td, tr {
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
         display: block;
         width: 100%;
     }

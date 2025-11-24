@@ -7,76 +7,143 @@ UO300351
 
 /* Especificidad = 001 */
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 0.5rem;
 }
 
 /* Especificidad = 001 */
 nav {
-    display: flex;
-    gap: 0.75rem;
-    justify-content: flex-end;
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+}
+
+/* Botón del menú (estilos mínimos) */
+header>button {
+  padding: 0.5rem 0.75rem;
+  border: 1px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 1rem;
 }
 
 /* Especificidad = 001 */
+img,
 video,
 audio {
-    width: 100%;
-    height: auto;
+  max-width: 100%;
+  height: auto;
 }
 
-/* Especificidad = 001 */
-img {
-    max-width: 100%;
-    height: auto;
+/* Especificidad = 012 */
+section .gallery {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  /* opcional para separar las fotos */
 }
+
+/* Especificidad = 002 */
+section figure {
+  width: 100%; /* Ocupa todo el ancho del contenedor */
+  max-width: 100%; /* No permitir que se salga */
+  height: auto; /* Altura fija */
+  margin: 1rem auto; /* Centrado horizontal */
+  padding: 0;
+  position: relative; /* Necesario para Leaflet */
+}
+
+
+/* Especificidad = 012 */
+section .gallery video {
+  display: block;
+  margin: 0 auto;
+}
+
+/* Especificidad = 012 */
+section .gallery figure {
+  text-align: center;
+}
+
+/* Contenedor del mapa */
+section figure.leaflet-container {
+  width: 80%;
+  /* Ocupa todo el ancho del contenedor */
+  max-width: 100%;
+  /* No permitir que se salga */
+  height: 26rem;
+  /* Altura fija */
+  margin: 1rem auto;
+  /* Centrado horizontal */
+  padding: 0;
+  position: relative;
+  /* Necesario para Leaflet */
+}
+
 
 /* ------------------------------- */
 /*   MEDIA QUERIES: Disenio movil   */
 /* ------------------------------- */
 @media (min-width: 320px) and (max-width: 799px) {
 
-    /* Especificidad = 001 
+  /* Especificidad = 001 
        Se redefinen flex-direction y align-items 
        Se redefine align-items */
-    header {
-        flex-direction: column;
-        align-items: center;
-    }
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
 
-    /* Especificidad = 001 
+  /* Especificidad = 001 
        Se redefinen flex-direction, justify-content y align-items
        Se redefine justify-content */
-    nav {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
+  nav {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 
-    /* Especificidad = 002
-       Se redefine display */
-    main > p:first-of-type {
-        display: none;
-    }
+  /* Menú colapsable en móvil */
+  nav[data-open="false"] {
+    display: none;
+  }
 
-    /* Especificidad = 002
+  nav[data-open="true"] {
+    display: flex;
+  }
+}
+
+/* En escritorio, el botón no es necesario */
+@media (min-width: 800px) {
+  header>button[aria-haspopup] {
+    display: none;
+  }
+
+  /* Especificidad = 002
        Se redefinen width y height
        Se redefine width
        Se redefine height */
-    video,
-    audio {
-        width: 100%;
-        height: auto;
-    }
+  video,
+  audio {
+    width: 100%;
+    height: auto;
+  }
 
-    /* Especificidad = 002
-       Se redefinen width, height y display */
-    article h2 + img {
-        width: 100%;     
-        height: auto;    
-        display: block;  
-        margin: 0 auto; 
-    }
+  /* Especificidad = 002
+  Se redefinen width, height y display */
+  article h2+img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+  }
+
+  /* Especificidad = 002 */
+  section .gallery {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
 }

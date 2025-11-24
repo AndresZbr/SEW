@@ -23,6 +23,7 @@
 <body>
     <header>
         <h1><a href="index.html" title="Ir a la página principal">MotoGP Desktop</a></h1>
+        <button>☰ Menú</button>
         <nav>
             <a href="index.html" title="Inicio de MotoGP-Desktop">Inicio</a>
             <a href="piloto.html" title="Información del piloto">Piloto</a>
@@ -43,7 +44,7 @@
     </main>
 
     <!-- Script principal -->
-    <script defer>
+    <script>
         document.addEventListener("DOMContentLoaded", () => {
             const main = document.querySelector("main");
 
@@ -67,6 +68,7 @@
             teruel.getMeteorologiaEntrenos("2025-06-04", "2025-06-06", meteorologiaEntrenos);
         });
     </script>
+    <script src="js/menu.js" defer></script>
 </body>
 
 </html>

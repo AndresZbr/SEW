@@ -1,10 +1,10 @@
 <?xml version='1.0' encoding='utf-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="2567" height="466">
-  <rect x="0" y="0" width="2567" height="466" fill="white" stroke="black" stroke-width="1" />
-  <line x1="30" y1="30" x2="30" y2="436" stroke="black" stroke-width="2" />
-  <line x1="30" y1="436" x2="2537" y2="436" stroke="black" stroke-width="2" />
-  <polyline points="30.0,66.97000000000003 177.5,63.19999999999999 325.0,63.620000000000005 472.5,53.98000000000002 620.0,38.81999999999999 767.5,42.14999999999998 915.0,31.120000000000005 1062.5,29.120000000000005 1210.0,37.97000000000003 1357.5,44.579999999999984 1505.0,52.089999999999975 1652.5,44.93000000000001 1800.0,43.44 1947.5,38.93000000000001 2095.0,54.97000000000003 2242.5,57.860000000000014 2390.0,76.17000000000002 2537.5,71.18 2537,436 30,436" stroke="red" stroke-width="2" fill="lightblue" />
-  <text x="30" y="20" fill="black" style="font-size:24px; font-weight:bold">Altimetría del circuito: MotorLand Aragón</text>
-  <text x="1283.5" y="456" fill="black" style="font-size:18px; text-anchor:middle">Distancia (m)</text>
-  <text x="15" y="233.0" fill="black" style="font-size:18px; writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1" width="5812" height="467">
+  <rect x="0" y="0" width="5812" height="467" fill="white" stroke="black" stroke-width="1" />
+  <line x1="30" y1="30" x2="30" y2="437" stroke="black" stroke-width="2" />
+  <line x1="30" y1="437" x2="5782" y2="437" stroke="black" stroke-width="2" />
+  <polyline points="30.0,67.97000000000003 177.5,68.0 325.0,64.0 472.5,65.0 620.0,63.0 767.5,57.0 915.0,54.0 1062.5,40.0 1210.0,41.0 1357.5,45.0 1505.0,41.0 1652.5,32.0 1800.0,31.0 1947.5,30.0 2095.0,30.0 2242.5,30.0 2390.0,38.0 2537.5,41.0 2685.0,42.0 2832.5,46.0 2980.0,50.0 3127.5,52.0 3275.0,53.0 3422.5,54.0 3570.0,53.0 3717.5,51.0 3865.0,49.0 4012.5,47.0 4160.0,46.0 4307.5,40.0 4455.0,45.0 4602.5,38.0 4750.0,44.0 4897.5,56.0 5045.0,59.0 5192.5,81.0 5340.0,77.0 5487.5,73.0 5635.0,72.0 5782.5,68.0 5782,437 30,437" stroke="red" stroke-width="2" fill="lightblue" />
+  <text x="30" y="20" fill="black" style="font-size:35px; font-weight:bold">Altimetría del circuito: MotorLand Aragón</text>
+  <text x="2906.0" y="457" fill="black" style="font-size:30px; text-anchor:middle">Distancia (m)</text>
+  <text x="15" y="233.5" fill="black" style="font-size:30px; writing-mode: tb; glyph-orientation-vertical: 0;">Altitud (m)</text>
 </svg>

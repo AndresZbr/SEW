@@ -1,35 +1,69 @@
 <!DOCTYPE HTML>
 <html lang="es">
-    <head>
-        <meta charset="UTF-8" />
-        <title>MotoGP-circuito</title>
-        <meta name ="author" content ="Andres Zhou Blanco Rodriguez" />
-        <meta name ="description" content ="Información circuito MotoGP-Desktop" />
-        <meta name ="keywords" content ="aquí cada documento debe tener la lista
-            de las palabras clave del mismo separadas por comas" />
-        <meta name ="viewport" content ="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" type="text/css" href="estilo/estilo.css" />
-        <link rel="stylesheet" type="text/css" href="estilo/layout.css" />
-        <link rel="icon" type="image/x-icon" href="multimedia/favicon.ico" />
-    </head>
-    <body>
-        <header>
-            <h1><a href="index.html" title="Ir a la pagina principal">MotoGP Desktop</a></h1>
-            <nav>
-                <a href="index.html" title="Inicio de MotoGP-Desktop">Inicio</a>
-                <a href="piloto.html" title="Información del piloto">Piloto</a>
-                <a href="circuito.html" title="Información del circuito" class="active">Circuito</a>
-                <a href="meteorologia.html" title="Meteorología de MotoGP-Desktop">Meteorología</a>
-                <a href="clasificaciones.html" title="Clasificaciones de MotoGP-Desktop">Clasificaciones</a>
-                <a href="juegos.html" title="Juegos de MotoGP-Desktop">Juegos</a>
-                <a href="ayuda.html" title="Ayuda de MotoGP-Desktop">Ayuda</a>
-            </nav>
-        </header>
-        <main>
-            <p class="migas">Estás en: <a href="index.html">Inicio</a> &gt;&gt; <strong>Circuito</strong></p>
-            <h2>Circuito</h2>
-        </main>
-        
 
-    </body>
+<head>
+    <meta charset="UTF-8" />
+    <title>MotoGP - Circuito</title>
+    <meta name="author" content="Andres Zhou Blanco Rodriguez" />
+    <meta name="description" content="Información circuito MotoGP-Desktop" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="estilo/estilo.css" />
+    <link rel="stylesheet" href="estilo/layout.css" />
+    <link rel="icon" href="multimedia/favicon.ico" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="js/circuito.js"></script>
+    <script src="js/menu.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1><a href="index.html">MotoGP Desktop</a></h1>
+
+        <button>☰ Menú</button>
+        <nav>
+            <a href="index.html" title="Inicio de MotoGP-Desktop">Inicio</a>
+            <a href="piloto.html" title="Información del piloto">Piloto</a>
+            <a href="circuito.html" title="Información del circuito"  class="active">Circuito</a>
+            <a href="meteorologia.html" title="Meteorología de MotoGP-Desktop">Meteorología</a>
+            <a href="clasificaciones.html" title="Clasificaciones de MotoGP-Desktop">Clasificaciones</a>
+            <a href="juegos.html" title="Juegos de MotoGP-Desktop">Juegos</a>
+            <a href="ayuda.html" title="Ayuda de MotoGP-Desktop">Ayuda</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <p>Estás en: <a href="index.html">Inicio</a> &gt;&gt; <strong>Circuito</strong></p>
+
+        <h2>Circuito</h2>
+
+        <!-- SECCIÓN 0 - Cargar HTML -->
+        <section>
+            <h2>Selecciona el archivo infoCircuito.html</h2>
+            <button>Cargar HTML</button>
+        </section>
+
+        <hr />
+
+        <!-- SECCIÓN 1 - Cargar SVG -->
+        <section>
+            <h2>Selecciona el archivo altimetria.svg</h2>
+            <button>Cargar SVG</button>
+        </section>
+
+        <hr />
+
+        <!-- SECCIÓN 2 - Cargar KML -->
+        <section>
+            <h2>Selecciona el archivo circuito.kml</h2>
+            <button>Cargar KML</button>
+        </section>
+
+    </main>
+
+</body>
+
 </html>

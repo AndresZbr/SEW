@@ -33,7 +33,7 @@ class Cronometro {
         }
         this.#mostrar();
     }
-    
+
     // Mostrar el tiempo transcurrido
     #mostrar() {
         const minutos = parseInt(this.#tiempo / 60000);
@@ -42,10 +42,10 @@ class Cronometro {
 
         const texto = `${String(minutos).padStart(2, "0")}:${String(segundos).padStart(2, "0")}.${decimas}`;
 
-        const p = document.querySelector("main p");
+        const p = document.querySelector("main p:last-of-type")
         if (p) p.textContent = texto;
     }
-    
+
     // Parar el cronómetro
     parar() {
         clearInterval(this.#corriendo);
@@ -63,12 +63,12 @@ class Cronometro {
 
 // Crear instancia del cronómetro cuando cargue el DOM
 document.addEventListener("DOMContentLoaded", () => {
-    const cronometro = new Cronometro();
+    // Solo inicializar si hay al menos 3 botones en el main (página de cronómetro)
+    const botones = document.querySelectorAll("main button");
+    if (botones.length < 3) return;
 
-    // Seleccionar botones
-    const botonIniciar = document.querySelector("button#iniciar");
-    const botonParar = document.querySelector("button#parar");
-    const botonReiniciar = document.querySelector("button#reiniciar");
+    const cronometro = new Cronometro();
+    const [botonIniciar, botonParar, botonReiniciar] = botones;
 
     // Asignar eventos sin usar atributos HTML
     botonIniciar.addEventListener("click", () => cronometro.arrancar());

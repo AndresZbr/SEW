@@ -3,7 +3,7 @@ Andres Zhou Blanco Rodriguez
 UO300351
 Clase Ciudad para el proyecto MotoGP-Desktop
 Incluye métodos para meteorología de carrera y entrenamientos
-Versión sin jQuery — totalmente compatible con las recomendaciones del W3C
+Versión W3C semántica, sin divs innecesarios
 */
 
 class Ciudad {
@@ -14,7 +14,6 @@ class Ciudad {
     #poblacion;
     #coordenadas;
 
-    // Constructor
     constructor(nombre, pais, gentilicio) {
         this.#nombre = nombre;
         this.#pais = pais;
@@ -47,7 +46,9 @@ class Ciudad {
     obtenerCoordenadas() { return this.#coordenadas; }
 
     crearInfoHTML() {
-        const section = document.createElement("div");
+        const section = document.createElement("section"); // semántico
+        section.setAttribute("aria-label", `Información de ${this.#nombre}`);
+
         const h3 = document.createElement("h3");
         h3.textContent = this.obtenerNombreCiudad();
 
@@ -65,50 +66,42 @@ class Ciudad {
     // -------------------------------
     // Meteorología del día de la carrera
     // -------------------------------
-    async getMeteorologiaCarrera(fecha, section) {
-        // Limpiar contenido previo
-        section.innerHTML = "";
+    async getMeteorologiaCarrera(fecha, contenedor) {
+        contenedor.innerHTML = "";
 
-        // Agregar título
         const titulo = document.createElement("h3");
         titulo.textContent = "Datos del día de la carrera";
-        section.appendChild(titulo);
+        contenedor.appendChild(titulo);
 
-        // Obtener coordenadas
         const [lat, lon] = this.#coordenadas;
-
         const url = `https://archive-api.open-meteo.com/v1/archive?latitude=${lat}&longitude=${lon}&start_date=${fecha}&end_date=${fecha}&hourly=temperature_2m,precipitation,wind_speed_10m,relative_humidity_2m&timezone=Europe/Madrid`;
 
         try {
             const response = await fetch(url);
             const data = await response.json();
 
-            // Buscar la hora 14:00
             const horaIndex = data.hourly.time.findIndex(t => t.endsWith("14:00"));
             if (horaIndex === -1) {
                 const p = document.createElement("p");
                 p.textContent = "No hay datos disponibles a las 14:00.";
-                section.appendChild(p);
+                contenedor.appendChild(p);
                 return;
             }
 
             const p = document.createElement("p");
-            p.textContent = `2025-06-06 → 14:00 → Temperatura: ${data.hourly.temperature_2m[horaIndex]} °C, 
-                Lluvia: ${data.hourly.precipitation[horaIndex]} mm, 
-                Viento: ${data.hourly.wind_speed_10m[horaIndex]} km/h, 
-                Humedad: ${data.hourly.relative_humidity_2m[horaIndex]} %`;
-            section.appendChild(p);
+            p.textContent = `14:00 → Temperatura: ${data.hourly.temperature_2m[horaIndex]} °C, 
+Lluvia: ${data.hourly.precipitation[horaIndex]} mm, 
+Viento: ${data.hourly.wind_speed_10m[horaIndex]} km/h, 
+Humedad: ${data.hourly.relative_humidity_2m[horaIndex]} %`;
+            contenedor.appendChild(p);
 
         } catch (error) {
             console.error("Error al obtener meteorología:", error);
             const p = document.createElement("p");
             p.textContent = "No se pudieron cargar los datos meteorológicos.";
-            section.appendChild(p);
+            contenedor.appendChild(p);
         }
     }
-
-
-
 
     procesarJSONCarrera(datos) {
         if (!datos || !datos.hourly || !datos.daily) return null;
@@ -142,7 +135,6 @@ class Ciudad {
     // -------------------------------
     async getMeteorologiaEntrenos(startDate, endDate, contenedor) {
         const [lat, lon] = this.#coordenadas;
-
         const url = `https://archive-api.open-meteo.com/v1/archive?latitude=${lat}&longitude=${lon}&start_date=${startDate}&end_date=${endDate}&hourly=temperature_2m,rain,wind_speed_10m,relative_humidity_2m&timezone=Europe/Madrid`;
 
         try {
@@ -153,7 +145,9 @@ class Ciudad {
             this.mostrarMeteorologiaHTML(medias, contenedor, "Medias de entrenamientos");
         } catch (e) {
             console.error("Error al obtener datos meteorológicos de entrenamientos.", e);
-            alert("No se pudieron cargar los datos meteorológicos de entrenamientos.");
+            const p = document.createElement("p");
+            p.textContent = "No se pudieron cargar los datos meteorológicos de entrenamientos.";
+            contenedor.appendChild(p);
         }
     }
 
@@ -189,7 +183,8 @@ class Ciudad {
     // Mostrar meteorología en HTML
     // -------------------------------
     mostrarMeteorologiaHTML(meteorologia, contenedor, titulo) {
-        contenedor.innerHTML = ""; // limpiar contenido previo
+        contenedor.innerHTML = "";
+
         const h3 = document.createElement("h3");
         h3.textContent = titulo;
         contenedor.appendChild(h3);
@@ -211,8 +206,10 @@ class Ciudad {
         } else if (!meteorologia?.horario && !meteorologia?.diario) {
             for (const dia in meteorologia) {
                 const m = meteorologia[dia];
-                const p = document.createElement("p");
-                p.innerHTML = `<strong>${dia}</strong>`;
+                const article = document.createElement("article"); // semántico
+                const strong = document.createElement("strong");
+                strong.textContent = dia;
+
                 const ul = document.createElement("ul");
                 ul.innerHTML = `
                     <li>Temperatura media: ${m.temperatura} °C</li>
@@ -220,7 +217,9 @@ class Ciudad {
                     <li>Viento medio: ${m.viento} km/h</li>
                     <li>Humedad media: ${m.humedad} %</li>
                 `;
-                contenedor.append(p, ul);
+
+                article.append(strong, ul);
+                contenedor.appendChild(article);
             }
         }
     }

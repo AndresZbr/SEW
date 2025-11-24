@@ -1,0 +1,14 @@
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\bin\Debug\net9.0\XmlToSvgApp.exe
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\bin\Debug\net9.0\XmlToSvgApp.deps.json
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\bin\Debug\net9.0\XmlToSvgApp.runtimeconfig.json
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\bin\Debug\net9.0\XmlToSvgApp.dll
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\bin\Debug\net9.0\XmlToSvgApp.pdb
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.GeneratedMSBuildEditorConfig.editorconfig
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.AssemblyInfoInputs.cache
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.AssemblyInfo.cs
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.csproj.CoreCompileInputs.cache
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.dll
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\refint\XmlToSvgApp.dll
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.pdb
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\XmlToSvgApp.genruntimeconfig.cache
+C:\xampp\htdocs\MotoGP-Desktop\xml\XmlToSvgApp\obj\Debug\net9.0\ref\XmlToSvgApp.dll

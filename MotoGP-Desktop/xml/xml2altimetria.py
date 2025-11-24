@@ -52,13 +52,13 @@ def crear_svg(distancias, altitudes, nombreCircuito, nombreArchivo='altimetria.s
 
     # Título
     ET.SubElement(svg, 'text', x=str(margen), y=str(margen - 10),
-                  fill="black", style="font-size:24px; font-weight:bold").text = f"Altimetría del circuito: {nombreCircuito}"
+                  fill="black", style="font-size:35px; font-weight:bold").text = f"Altimetría del circuito: {nombreCircuito}"
 
     # Etiquetas de ejes
     ET.SubElement(svg, 'text', x=str(ancho/2), y=str(alto - 10),
-                  fill="black", style="font-size:18px; text-anchor:middle").text = "Distancia (m)"
+                  fill="black", style="font-size:30px; text-anchor:middle").text = "Distancia (m)"
     ET.SubElement(svg, 'text', x="15", y=str(alto/2),
-                  fill="black", style="font-size:18px; writing-mode: tb; glyph-orientation-vertical: 0;").text = "Altitud (m)"
+                  fill="black", style="font-size:30px; writing-mode: tb; glyph-orientation-vertical: 0;").text = "Altitud (m)"
 
     # Guardar SVG
     tree = ET.ElementTree(svg)

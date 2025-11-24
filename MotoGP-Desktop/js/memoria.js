@@ -33,8 +33,7 @@ class Memoria {
 
     // Barajar las cartas aleatoriamente
     barajarCartas() {
-        const main = document.querySelector("main");
-        const contenedor = main.querySelector("section.tablero") || main;
+        const contenedor = document.querySelector("main");
         const cartas = Array.from(contenedor.querySelectorAll("article"));
 
         // Fisher-Yates
@@ -88,6 +87,23 @@ class Memoria {
         if (todas) {
             this.#cronometro.parar();
         }
+    }
+
+    // Reiniciar el juego: estados, cronómetro y orden
+    reiniciarJuego() {
+        const main = document.querySelector("main");
+        const contenedor = main.querySelector("section") || main;
+        const cartas = Array.from(contenedor.querySelectorAll("article"));
+
+        cartas.forEach(c => c.dataset.estado = null);
+        this.#tableroBloqueado = false;
+        this.#primeraCarta = null;
+        this.#segundaCarta = null;
+
+        this.#cronometro.reiniciar();
+        this.#cronometro.arrancar();
+
+        this.barajarCartas();
     }
 }
 

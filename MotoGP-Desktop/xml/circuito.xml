@@ -36,121 +36,313 @@
   <tramos>
     <tramo id="1">
       <distancia>250</distancia>
-      <longitudC>-0.200260</longitudC>
+      <longitudC>-0.19808</longitudC>
+      <latitudC>41.078459</latitudC>
+      <altitudC>430</altitudC>
+      <sector>1</sector>
+    </tramo>
+
+    <tramo id="2">
+      <distancia>250</distancia>
+      <longitudC>-0.20026</longitudC>
       <latitudC>41.079732</latitudC>
       <altitudC>346</altitudC>
       <sector>1</sector>
     </tramo>
-    <tramo id="2">
+
+    <tramo id="3">
       <distancia>250</distancia>
-      <longitudC>-0.201828</longitudC>
-      <latitudC>41.078696</latitudC>
+      <longitudC>-0.2015446501350404</longitudC>
+      <latitudC>41.07873005443732</latitudC>
       <altitudC>347</altitudC>
       <sector>1</sector>
     </tramo>
-    <tramo id="3">
+
+    <tramo id="4">
       <distancia>250</distancia>
-      <longitudC>-0.204811</longitudC>
-      <latitudC>41.079360</latitudC>
+      <longitudC>-0.2023749070620195</longitudC>
+      <latitudC>41.07857363888211</latitudC>
+      <altitudC>347.5</altitudC>
+      <sector>1</sector>
+    </tramo>
+
+    <tramo id="5">
+      <distancia>250</distancia>
+      <longitudC>-0.2044518029549458</longitudC>
+      <latitudC>41.07911348527167</latitudC>
       <altitudC>348</altitudC>
       <sector>1</sector>
     </tramo>
-    <tramo id="4">
+
+    <tramo id="6">
       <distancia>250</distancia>
-      <longitudC>-0.205502</longitudC>
-      <latitudC>41.081783</latitudC>
+      <longitudC>-0.2049455186519311</longitudC>
+      <latitudC>41.07950507818167</latitudC>
+      <altitudC>348.5</altitudC>
+      <sector>1</sector>
+    </tramo>
+
+    <tramo id="7">
+      <distancia>250</distancia>
+      <longitudC>-0.2054436891324085</longitudC>
+      <latitudC>41.08172855391199</latitudC>
       <altitudC>349</altitudC>
       <sector>1</sector>
     </tramo>
-    <tramo id="5">
+
+    <tramo id="8">
       <distancia>250</distancia>
-      <longitudC>-0.206998</longitudC>
-      <latitudC>41.082534</latitudC>
+      <longitudC>-0.2061016711802255</longitudC>
+      <latitudC>41.08223242645494</latitudC>
+      <altitudC>347.5</altitudC>
+      <sector>2</sector>
+    </tramo>
+
+    <tramo id="9">
+      <distancia>250</distancia>
+      <longitudC>-0.2067831033607082</longitudC>
+      <latitudC>41.08257472740372</latitudC>
       <altitudC>346</altitudC>
       <sector>2</sector>
     </tramo>
-    <tramo id="6">
+
+    <tramo id="10">
+      <distancia>250</distancia>
+      <longitudC>-0.2071817535729492</longitudC>
+      <latitudC>41.08248644510297</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+
+    <tramo id="11">
       <distancia>250</distancia>
       <longitudC>-0.207649</longitudC>
       <latitudC>41.081133</latitudC>
       <altitudC>346</altitudC>
       <sector>2</sector>
     </tramo>
-    <tramo id="7">
+
+    <tramo id="12">
+      <distancia>250</distancia>
+      <longitudC>-0.2086693136369278</longitudC>
+      <latitudC>41.08029867416398</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+
+    <tramo id="13">
+      <distancia>250</distancia>
+      <longitudC>-0.2093537950480384</longitudC>
+      <latitudC>41.08000300778949</latitudC>
+      <altitudC>346</altitudC>
+      <sector>2</sector>
+    </tramo>
+
+    <tramo id="14">
       <distancia>250</distancia>
       <longitudC>-0.209912</longitudC>
       <latitudC>41.080049</latitudC>
       <altitudC>346</altitudC>
       <sector>2</sector>
     </tramo>
-    <tramo id="8">
+
+    <tramo id="15">
       <distancia>250</distancia>
-      <longitudC>-0.210621</longitudC>
-      <latitudC>41.083141</latitudC>
+      <longitudC>-0.2101668599539108</longitudC>
+      <latitudC>41.08028878511966</latitudC>
       <altitudC>346</altitudC>
       <sector>2</sector>
     </tramo>
-    <tramo id="9">
+
+    <tramo id="16">
       <distancia>250</distancia>
-      <longitudC>-0.209845</longitudC>
-      <latitudC>41.083589</latitudC>
-      <altitudC>347</altitudC>
+      <longitudC>-0.2107051979808172</longitudC>
+      <latitudC>41.08300575286325</latitudC>
+      <altitudC>346</altitudC>
       <sector>2</sector>
     </tramo>
-    <tramo id="10">
+
+    <tramo id="17">
+      <distancia>250</distancia>
+      <longitudC>-0.2104026461377484</longitudC>
+      <latitudC>41.08328098751693</latitudC>
+      <altitudC>346.5</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="18">
+      <distancia>250</distancia>
+      <longitudC>-0.210045579954018</longitudC>
+      <latitudC>41.08336411769223</latitudC>
+      <altitudC>346.75</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="19">
+      <distancia>250</distancia>
+      <longitudC>-0.2097606449032741</longitudC>
+      <latitudC>41.0835635614125</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="20">
+      <distancia>250</distancia>
+      <longitudC>-0.2100514926915875</longitudC>
+      <latitudC>41.0838906262252</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="21">
+      <distancia>250</distancia>
+      <longitudC>-0.2107887505047967</longitudC>
+      <latitudC>41.08417615028305</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="22">
+      <distancia>250</distancia>
+      <longitudC>-0.2114517108922143</longitudC>
+      <latitudC>41.08423760614389</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="23">
       <distancia>250</distancia>
       <longitudC>-0.212059</longitudC>
       <latitudC>41.084167</latitudC>
       <altitudC>347</altitudC>
       <sector>3</sector>
     </tramo>
-    <tramo id="11">
+
+    <tramo id="24">
+      <distancia>250</distancia>
+      <longitudC>-0.2124900110125161</longitudC>
+      <latitudC>41.08395542164639</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="25">
+      <distancia>250</distancia>
+      <longitudC>-0.212786466765742</longitudC>
+      <latitudC>41.08358802569978</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="26">
+      <distancia>250</distancia>
+      <longitudC>-0.2128564903561181</longitudC>
+      <latitudC>41.0831566673436</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="27">
+      <distancia>250</distancia>
+      <longitudC>-0.2126310301775214</longitudC>
+      <latitudC>41.08165647708953</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="28">
       <distancia>250</distancia>
       <longitudC>-0.212459</longitudC>
       <latitudC>41.081116</latitudC>
       <altitudC>347</altitudC>
       <sector>3</sector>
     </tramo>
-    <tramo id="12">
+
+    <tramo id="29">
+      <distancia>250</distancia>
+      <longitudC>-0.2115271017841835</longitudC>
+      <latitudC>41.07967811183462</latitudC>
+      <altitudC>347</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="30">
       <distancia>250</distancia>
       <longitudC>-0.210549</longitudC>
       <latitudC>41.078891</latitudC>
       <altitudC>347</altitudC>
       <sector>3</sector>
     </tramo>
-    <tramo id="13">
+
+    <tramo id="31">
       <distancia>250</distancia>
-      <longitudC>-0.208638</longitudC>
-      <latitudC>41.079408</latitudC>
+      <longitudC>-0.2089334654241815</longitudC>
+      <latitudC>41.07939091223915</latitudC>
       <altitudC>348</altitudC>
       <sector>3</sector>
     </tramo>
-    <tramo id="14">
+
+    <tramo id="32">
+      <distancia>250</distancia>
+      <longitudC>-0.2082039464048879</longitudC>
+      <latitudC>41.07935280391707</latitudC>
+      <altitudC>348</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="33">
       <distancia>250</distancia>
       <longitudC>-0.206492</longitudC>
       <latitudC>41.078244</latitudC>
       <altitudC>348</altitudC>
-      <sector>4</sector>
+      <sector>3</sector>
     </tramo>
-    <tramo id="15">
+
+    <tramo id="34">
       <distancia>250</distancia>
       <longitudC>-0.206812</longitudC>
       <latitudC>41.077375</latitudC>
       <altitudC>348</altitudC>
+      <sector>3</sector>
+    </tramo>
+
+    <tramo id="35">
+      <distancia>250</distancia>
+      <longitudC>-0.1954385866271846</longitudC>
+      <latitudC>41.07427792694129</latitudC>
+      <altitudC>348.5</altitudC>
       <sector>4</sector>
     </tramo>
-    <tramo id="16">
+
+    <tramo id="36">
+      <distancia>250</distancia>
+      <longitudC>-0.194563162504352</longitudC>
+      <latitudC>41.07448622205776</latitudC>
+      <altitudC>349</altitudC>
+      <sector>4</sector>
+    </tramo>
+
+    <tramo id="37">
+      <distancia>250</distancia>
+      <longitudC>-0.1939671942187804</longitudC>
+      <latitudC>41.07504498851593</latitudC>
+      <altitudC>348.5</altitudC>
+      <sector>4</sector>
+    </tramo>
+
+    <tramo id="38">
       <distancia>250</distancia>
       <longitudC>-0.194153</longitudC>
       <latitudC>41.075969</latitudC>
       <altitudC>348</altitudC>
       <sector>4</sector>
     </tramo>
-    <tramo id="17">
+
+    <tramo id="39">
       <distancia>250</distancia>
-      <longitudC>-0.194614</longitudC>
-      <latitudC>41.074478</latitudC>
-      <altitudC>349</altitudC>
+      <longitudC>-0.19808</longitudC>
+      <latitudC>41.078459</latitudC>
+      <altitudC>430</altitudC>
       <sector>4</sector>
     </tramo>
   </tramos>

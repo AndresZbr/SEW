@@ -18,8 +18,7 @@ main {
 
 /* El título ocupa toda la primera fila */
 
-/* Especificidad = 002 
-   Se hereda el color de primer plano */
+/* Especificidad = 002 */
 main > h2 {
   grid-column: 1 / -1;
   text-align: center;
@@ -27,11 +26,18 @@ main > h2 {
   margin-bottom: 1rem;
 }
 
-/* El cronómetro ocupa toda la segunda fila */
+/* Las migas ocupan una fila completa y no entran en columnas */
+/* Especificidad = 002 */
+main > p.migas {
+  grid-column: 1 / -1;
+  text-align: left;
+  margin-bottom: 1rem;
+  margin-top: 0rem;
+}
 
-/* Especificidad = 002 
-   Se hereda el color de primer plano */
-main > p {
+/* El cronómetro ocupa toda la segunda fila (solo el último <p>) */
+/* Especificidad = 002 */
+main > p:last-of-type {
   grid-column: 1 / -1;
   text-align: center;
   font-size: 2rem;
@@ -42,7 +48,7 @@ main > p {
 
 /* Especificidad = 001 */
 article {
-  background-color: #f4f4f4; /* Se hereda el color de primer plano */
+  background-color: #f4f4f4;
   border: 2px solid #ccc;
   border-radius: 8px;
   display: grid;
@@ -53,14 +59,50 @@ article {
   transition: transform 0.2s ease-in-out;
 }
 
-/* Adaptación responsive con @media */
+/* Adaptación responsive */
 
 /* Especificidad = 001 */
 @media (max-width: 768px) {
 
-  /* Especificidad = 001
-     Se redefine grid-template-columns para reducir el layout a 2 columnas */
+  /* Se redefine grid-template-columns para móvil */
   main {
-    grid-template-columns: repeat(2, 1fr); /* 2 columnas en móvil */
+    grid-template-columns: repeat(2, 1fr); /* 2 columnas */
+    gap: 0.75rem;
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  /* Título más compacto en móvil */
+  main > h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Migas: permiten salto y ocupan fila completa */
+  main > p.migas {
+    grid-column: 1 / -1;
+    font-size: 0.95rem;
+    margin: 0.25rem 0 0.5rem;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  /* Cronómetro más compacto en móvil */
+  main > p:last-of-type {
+    font-size: 1.25rem;
+    margin-bottom: 0.75rem;
+  }
+
+  /* Tarjetas más compactas en móvil */
+  article {
+    padding: 0.75rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* Muy pequeñas pantallas: 1 columna */
+@media (max-width: 360px) {
+  main {
+    grid-template-columns: 1fr; /* 1 columna */
   }
 }
