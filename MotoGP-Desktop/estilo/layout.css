@@ -96,6 +96,10 @@ section figure.leaflet-container {
     align-items: center;
   }
 
+  a {
+    width: 100%;
+  }
+
   /* Especificidad = 001 
        Se redefinen flex-direction, justify-content y align-items
        Se redefine justify-content */
@@ -117,7 +121,7 @@ section figure.leaflet-container {
 
 /* En escritorio, el botón no es necesario */
 @media (min-width: 800px) {
-  header>button[aria-haspopup] {
+  header>button {
     display: none;
   }
 
