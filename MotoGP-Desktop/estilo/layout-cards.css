@@ -27,7 +27,7 @@ main > h2 {
 }
 
 /* Las migas ocupan una fila completa y no entran en columnas */
-/* Especificidad = 002 */
+/* Especificidad = 012 */
 main > p.migas {
   grid-column: 1 / -1;
   text-align: left;
@@ -36,7 +36,7 @@ main > p.migas {
 }
 
 /* El cronómetro ocupa toda la segunda fila (solo el último <p>) */
-/* Especificidad = 002 */
+/* Especificidad = 012 */
 main > p:last-of-type {
   grid-column: 1 / -1;
   text-align: center;
@@ -65,6 +65,7 @@ article {
 @media (max-width: 768px) {
 
   /* Se redefine grid-template-columns para móvil */
+  /* Especificidad = 001 */
   main {
     grid-template-columns: repeat(2, 1fr); /* 2 columnas */
     gap: 0.75rem;
@@ -73,12 +74,14 @@ article {
   }
 
   /* Título más compacto en móvil */
+  /* Especificidad = 002 */
   main > h2 {
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
 
   /* Migas: permiten salto y ocupan fila completa */
+  /* Especificidad = 012 */
   main > p.migas {
     grid-column: 1 / -1;
     font-size: 0.95rem;
@@ -88,12 +91,14 @@ article {
   }
 
   /* Cronómetro más compacto en móvil */
+  /* Especificidad = 012 */
   main > p:last-of-type {
     font-size: 1.25rem;
     margin-bottom: 0.75rem;
   }
 
   /* Tarjetas más compactas en móvil */
+  /* Especificidad = 001 */
   article {
     padding: 0.75rem;
     font-size: 0.95rem;
@@ -102,6 +107,7 @@ article {
 
 /* Muy pequeñas pantallas: 1 columna */
 @media (max-width: 360px) {
+  /* Especificidad = 001 */
   main {
     grid-template-columns: 1fr; /* 1 columna */
   }

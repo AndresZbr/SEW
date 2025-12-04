@@ -48,8 +48,9 @@ article img {
     transform: rotateY(180deg);
 }
 
-/* Especificidad = 001 */
+
 @media (max-width: 768px) {
+    /* Especificidad = 002 */
     main article {
         width: 45vw; /* Redefinición de ancho para dispositivos móviles */
     }

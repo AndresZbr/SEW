@@ -180,15 +180,20 @@ document.addEventListener("DOMContentLoaded", () => {
     // ===============================
     // Clase para cargar KML (mapa)
     // ===============================
+    // ===============================
+    // Clase para cargar KML (mapa) - MAPBOX
+    // ===============================
     class CargadorKML extends CargadorArchivo {
 
         constructor(button, seccion) {
             super(".kml,application/xml,text/xml");
             this.button = button;
             this.seccion = seccion;
-            this.figuraMapa = null;
-            this.mapa = null;
-            this.capaPolyline = null;
+            this.contenedorMapa = document.getElementById("mapa");
+            this.map = null;
+            this.lineLayerId = "kml-line";
+            this.pointLayerId = "kml-point";
+            this.sourceId = "kml-source";
             this.iniciar();
         }
 
@@ -196,7 +201,13 @@ document.addEventListener("DOMContentLoaded", () => {
             this.button.addEventListener("click", async () => {
                 try {
                     const kmlText = await this.leerArchivo();
-                    this.procesarKML(kmlText);
+                    const geojson = this.kmlAgeojson(kmlText);
+
+                    if (!this.map) this.crearMapa();
+
+                    this.dibujarGeoJSON(geojson);
+                    this.fitGeoJSON(geojson);
+
                 } catch (err) {
                     console.error(err);
                     alert(typeof err === "string" ? err : "Error al cargar el KML.");
@@ -204,82 +215,150 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         }
 
-        inicializarMapaIfNeeded() {
-            // Crear contenedor <figure> si no existe
-            if (!this.figuraMapa) {
-                this.figuraMapa = document.createElement("figure");
-                this.figuraMapa.style.width = "100%";
-                this.figuraMapa.style.height = "26rem";
-                this.seccion.appendChild(this.figuraMapa);
-            }
+        crearMapa() {
+            mapboxgl.accessToken = "pk.eyJ1IjoiYW5keW5zcXVlMTIiLCJhIjoiY21pbG1tcWxwMDc4YTNkc2RubHZqMXlzNiJ9.Y0prwI6xU3sd8nZ9GVdAZw";
 
-            // Crear mapa si no existe
-            if (!this.mapa) {
-                this.mapa = L.map(this.figuraMapa).setView([43.36, -5.85], 5);
+            this.contenedorMapa.style.width = "100%";
+            this.contenedorMapa.style.height = "26rem";
 
-                L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", {
-                    attribution: "&copy; OpenStreetMap contributors"
-                }).addTo(this.mapa);
-            }
+            this.map = new mapboxgl.Map({
+                container: this.contenedorMapa,
+                style: "mapbox://styles/mapbox/streets-v12",
+                center: [-3.7038, 40.4168],
+                zoom: 4
+            });
 
-            return this.mapa;
+            // ⚠ MUY IMPORTANTE
+            this.map.once("load", () => {
+                this.map.loadedFully = true;
+            });
         }
 
-        procesarKML(texto) {
-            const doc = new DOMParser().parseFromString(texto, "text/xml");
-            const coordsNode = doc.querySelector("LineString > coordinates");
-            const pointNode = doc.querySelector("Point > coordinates");
 
-            if (!coordsNode && !pointNode) {
-                alert("No se encontraron coordenadas en el KML.");
+        kmlAgeojson(kmlText) {
+            const parser = new DOMParser();
+            const kml = parser.parseFromString(kmlText, "text/xml");
+
+            const coordsNode = kml.querySelector("LineString > coordinates");
+            const pointNode = kml.querySelector("Point > coordinates");
+
+            // Ruta (LineString)
+            let lineCoords = [];
+            if (coordsNode) {
+                lineCoords = coordsNode.textContent.trim()
+                    .split(/\s+/)
+                    .map(pair => pair.split(",").map(Number))
+                    .map(([lon, lat]) => [lon, lat]);
+            }
+
+            // Origen (Point)
+            let point = null;
+            if (pointNode) {
+                const arr = pointNode.textContent.trim().split(",").map(Number);
+                point = [arr[0], arr[1]];
+            } else if (lineCoords.length) {
+                point = lineCoords[0];
+            }
+
+            // Construimos un FeatureCollection compatible
+            const fc = {
+                type: "FeatureCollection",
+                features: []
+            };
+
+            if (lineCoords.length) {
+                fc.features.push({
+                    type: "Feature",
+                    geometry: {
+                        type: "LineString",
+                        coordinates: lineCoords
+                    }
+                });
+            }
+
+            if (point) {
+                fc.features.push({
+                    type: "Feature",
+                    geometry: {
+                        type: "Point",
+                        coordinates: point
+                    },
+                    properties: { title: "Inicio" }
+                });
+            }
+
+            return fc;
+        }
+
+        dibujarGeoJSON(geojson) {
+            if (!this.map || !this.map.loaded()) {
+                // Esperamos a que se cargue el mapa antes de dibujar
+                this.map.once("load", () => this.dibujarGeoJSON(geojson));
                 return;
             }
 
-            const coordsText = coordsNode ? coordsNode.textContent.trim() : "";
-            const puntos = coordsText
-                ? coordsText.split(/\s+/)
-                    .map(pair => pair.split(",").map(Number))
-                    .filter(arr => arr.length >= 2 && !arr.some(isNaN))
-                    .map(([lon, lat]) => [lat, lon])
-                : [];
+            // eliminar capas previas
+            if (this.map.getLayer(this.lineLayerId)) this.map.removeLayer(this.lineLayerId);
+            if (this.map.getLayer(this.pointLayerId)) this.map.removeLayer(this.pointLayerId);
+            if (this.map.getSource(this.sourceId)) this.map.removeSource(this.sourceId);
 
-            let origin = null;
-            if (pointNode) {
-                const p = pointNode.textContent.trim().split(",").map(Number);
-                if (p.length >= 2 && !p.some(isNaN)) origin = [p[1], p[0]];
-            } else if (puntos.length) {
-                origin = puntos[0];
-            }
+            // añadir source
+            this.map.addSource(this.sourceId, {
+                type: "geojson",
+                data: geojson
+            });
 
-            this.inicializarMapaIfNeeded();
+            // capa de línea
+            this.map.addLayer({
+                id: this.lineLayerId,
+                type: "line",
+                source: this.sourceId,
+                paint: {
+                    "line-width": 4,
+                    "line-color": "#ff0000"
+                },
+                filter: ["==", ["geometry-type"], "LineString"]
+            });
 
-            // Limpiar capa previa
-            if (this.capaPolyline) {
-                this.mapa.removeLayer(this.capaPolyline);
-                this.capaPolyline = null;
-            }
+            // capa de punto de inicio
+            this.map.addLayer({
+                id: this.pointLayerId,
+                type: "circle",
+                source: this.sourceId,
+                paint: {
+                    "circle-radius": 6,
+                    "circle-color": "#0000ff"
+                },
+                filter: ["==", ["geometry-type"], "Point"]
+            });
+        }
 
-            // Añadir nueva polilínea
-            if (puntos.length) {
-                this.capaPolyline = L.polyline(puntos, { color: "red", weight: 3 }).addTo(this.mapa);
-            }
 
-            // Esperar un tick para asegurar que el contenedor tenga tamaño
-            setTimeout(() => {
-                if (this.capaPolyline) {
-                    this.mapa.fitBounds(this.capaPolyline.getBounds(), { padding: [20, 20] });
-                } else if (origin) {
-                    this.mapa.setView(origin, 13);
+        fitGeoJSON(geojson) {
+            const bounds = new mapboxgl.LngLatBounds();
+            let hasCoords = false;
+
+            geojson.features.forEach(f => {
+                if (f.geometry.type === "LineString") {
+                    f.geometry.coordinates.forEach(c => {
+                        bounds.extend(c);
+                        hasCoords = true;
+                    });
                 }
-                this.mapa.invalidateSize(); // recalcular tamaño y centrar
-            }, 50);
+                if (f.geometry.type === "Point") {
+                    bounds.extend(f.geometry.coordinates);
+                    hasCoords = true;
+                }
+            });
 
-            // Añadir marcador de origen
-            if (origin) {
-                L.marker(origin).addTo(this.mapa).bindTooltip("Inicio").openTooltip();
+            if (hasCoords) {
+                setTimeout(() => {
+                    this.map.fitBounds(bounds, { padding: 40 });
+                }, 300);
             }
         }
     }
+
 
 
     // ===============================
@@ -290,4 +369,11 @@ document.addEventListener("DOMContentLoaded", () => {
     new CargadorSVG(secciones[1].querySelector("button"), secciones[1]);
     new CargadorKML(secciones[2].querySelector("button"), secciones[2]);
 
+    const cargadorKML = new CargadorKML(
+        secciones[2].querySelector("button"),
+        secciones[2]
+    );
+
+    // Crear el mapa automáticamente al cargar la página
+    cargadorKML.crearMapa();
 });

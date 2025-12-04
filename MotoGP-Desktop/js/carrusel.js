@@ -1,4 +1,3 @@
-// Versión 1.4 - 24/11/2025 - Semántica W3C y carrusel con Flickr
 class Carrusel {
     constructor(busqueda) {
         this.busqueda = busqueda;

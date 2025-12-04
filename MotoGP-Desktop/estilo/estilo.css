@@ -10,48 +10,48 @@ body {
     font-family: "Lucida Grande", "Lucida Sans Unicode", "Arial", sans-serif;
     background-color: #22223b;
     color: #ffffff;
+    font-size: 1rem;
+    line-height: 1.6;
+    font-weight: 400;
 }
 
 /* Especificidad = 001 */
 header {
     background-color: #b8001f;
     color: #ffffff;
+    padding: 1rem;
 }
 
+/* Especificidad = 002 */
 header>button[aria-haspopup] {
     background: #f8f8f8;
     color: inherit;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 h1 a {
     color: #ffffff;
 }
 
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Especificidad = 001 */
 a {
     color: #acc9ff;
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 nav a {
     color: #ffffff;
-    text-decoration-line: none;
+    text-decoration: none;
 }
 
-/* Especificidad = 010 
-   Se hereda el color de fondo */
+/* Especificidad = 010 */
 .active {
     color: #ffec8b;
     font-weight: bold;
 }
 
-/* Especificidad = 004 
-   Se hereda el color de fondo */
+/* Especificidad = 004 */
 body>main>p>strong {
     color: #ff4d4d;
     font-size: 1.5rem;
@@ -60,28 +60,12 @@ body>main>p>strong {
     font-weight: bold;
 }
 
-/* ------------------------------------------------------------------------------------------- */
-/*   Tipografía global adaptable  */
-/* ------------------------------------------------------------------------------------------- */
-
-/* Especificidad = 001 */
+/* Tipografía global adaptable */
 html {
     font-size: 100%;
 }
 
-/* Especificidad = 001 */
-body {
-    font-size: 1rem;
-    line-height: 1.6;
-    font-weight: 400;
-}
-
-/* ===================================== */
-/* Encabezados principales  */
-/* ===================================== */
-
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Encabezados */
 h1 {
     font-size: 2rem;
     font-weight: 700;
@@ -90,8 +74,7 @@ h1 {
     text-transform: uppercase;
 }
 
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Especificidad = 001 */
 h2 {
     font-size: 1.5rem;
     font-weight: 600;
@@ -100,8 +83,7 @@ h2 {
     margin-bottom: 0.75rem;
 }
 
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Especificidad = 001 */
 h3 {
     font-size: 1.25rem;
     font-weight: 600;
@@ -110,20 +92,15 @@ h3 {
     margin-bottom: 0.5rem;
 }
 
-/* ===================================== */
-/*      Texto general y listas    */
-/* ===================================== */
-
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Texto general */
+/* Especificidad = 001 */
 p {
     font-size: 1rem;
     font-weight: 400;
     margin-bottom: 1rem;
 }
 
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Especificidad = 001 */
 figcaption {
     font-size: 0.875rem;
     font-style: italic;
@@ -131,12 +108,8 @@ figcaption {
     margin-top: 0.5rem;
 }
 
-/* ===================================== */
-/*   Listas no ordenadas (UL)  */
-/* ===================================== */
-
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Listas */
+/* Especificidad = 001 */
 ul {
     list-style-type: square;
     margin-left: 1.5rem;
@@ -145,18 +118,12 @@ ul {
     padding-left: 1rem;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 ul li {
     margin-bottom: 0.5rem;
 }
 
-/* ===================================== */
-/*     Listas ordenadas (OL)     */
-/* ===================================== */
-
-/* Especificidad = 001 
-   Se hereda el color de fondo */
+/* Especificidad = 001 */
 ol {
     list-style-type: upper-roman;
     margin-left: 1.5rem;
@@ -165,19 +132,13 @@ ol {
     padding-left: 1rem;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 ol li {
     margin-bottom: 0.75rem;
     font-weight: 500;
 }
 
-/* ===================================== */
-/*   Listas anidadas (UL u OL dentro)  */
-/* ===================================== */
-
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 ul ul,
 ol ol,
 ul ol,
@@ -188,52 +149,14 @@ ol ul {
     padding-left: 1rem;
 }
 
-/* Especificidad = 003 
-   Se hereda el color de fondo */
+/* Especificidad = 003 */
 ul ul li,
 ol ol li {
     margin-bottom: 0.4rem;
 }
 
-/* ===================================== */
-/*   Estilos para listas de definición   */
-/* ===================================== */
-
-/* Especificidad = 001 
-   Se hereda el color de primer plano */
-dl {
-    background-color: #2a2a40;
-    border-radius: 0.5rem;
-    padding: 1rem 1.5rem;
-    margin: 1.5rem 0;
-}
-
-/* Especificidad = 002 
-   Se hereda el color de fondo */
-dl dt {
-    color: #ffec8b;
-    font-size: 1.125rem;
-    font-weight: 600;
-    margin-top: 0.75rem;
-}
-
-/* Especificidad = 002 */
-dl dd {
-    color: #ffffff;
-    background-color: #b8001f;
-    font-size: 1rem;
-    line-height: 1.5;
-    margin: 0.25rem 0 0.75rem 1rem;
-    padding: 0.5rem 0.75rem;
-    border-radius: 0.25rem;
-}
-
-/* ================================ */
-/*         Estilo para tablas       */
-/* ================================ */
-
-/* Especificidad = 001 
-   Se hereda el color de primer plano */
+/* Tablas */
+/* Especificidad = 001 */
 table {
     width: 100%;
     border-collapse: collapse;
@@ -244,8 +167,7 @@ table {
     font-size: 1rem;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de fondo */
+/* Especificidad = 002 */
 table caption {
     caption-side: top;
     text-align: left;
@@ -255,8 +177,7 @@ table caption {
     font-size: 1.125rem;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de primer plano */
+/* Especificidad = 002 */
 table th {
     background-color: #b8001f;
     color: #ffffff;
@@ -266,8 +187,7 @@ table th {
     font-weight: 600;
 }
 
-/* Especificidad = 002 
-   Se hereda el color de primer plano */
+/* Especificidad = 002 */
 table td {
     padding: 0.75rem;
     color: #ffffff;
@@ -276,14 +196,10 @@ table td {
     overflow: hidden;
 }
 
-/* ====================================================== */
-/*   Estructura alternativa de tabla en pantallas pequeñas */
-/* ====================================================== */
-
+/* Tablas responsive */
 @media (max-width: 799px) {
 
-    /* Especificidad = 001 
-       Se redefine display y width */
+    /* Especificidad = 001 */
     table,
     thead,
     tbody,
@@ -294,14 +210,12 @@ table td {
         width: 100%;
     }
 
-    /* Especificidad = 001 
-       Se redefine display */
+    /* Especificidad = 001 */
     thead {
         display: none;
     }
 
-    /* Especificidad = 001 
-       Se redefine margin-bottom, border, border-radius, background-color y padding */
+    /* Especificidad = 002 */
     table tr {
         margin-bottom: 1rem;
         border: 1px solid #444;
@@ -310,8 +224,7 @@ table td {
         padding: 0.5rem;
     }
 
-    /* Especificidad = 001 
-       Se redefine display, justify-content, align-items, padding y border */
+    /* Especificidad = 002 */
     table td {
         display: flex;
         justify-content: space-between;
@@ -320,8 +233,7 @@ table td {
         border: none;
     }
 
-    /* Especificidad = 003
-       Se hereda el color de fondo */
+    /* Especificidad = 003 */
     table td::before {
         content: attr(data-label);
         font-weight: 600;
