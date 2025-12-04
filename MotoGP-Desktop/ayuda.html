@@ -23,44 +23,34 @@
             <a href="piloto.html" title="Información del piloto">Piloto</a>
             <a href="circuito.html" title="Información del circuito">Circuito</a>
             <a href="meteorologia.html" title="Meteorología de MotoGP-Desktop">Meteorología</a>
-            <a href="clasificaciones.html" title="Clasificaciones de MotoGP-Desktop">Clasificaciones</a>
+            <a href="clasificaciones.php" title="Clasificaciones de MotoGP-Desktop">Clasificaciones</a>
             <a href="juegos.html" title="Juegos de MotoGP-Desktop">Juegos</a>
             <a href="ayuda.html" title="Ayuda de MotoGP-Desktop" class="active">Ayuda</a>
         </nav>
     </header>
+
     <main>
         <p class="migas">Estás en: <a href="index.html">Inicio</a> &gt;&gt; <strong>Ayuda</strong></p>
 
         <h2>Ayuda de MotoGP-Desktop</h2>
 
         <section>
-            <h3>Menu</h3>
+            <h3>Menú principal</h3>
             <section>
                 <h4>Inicio</h4>
-                <p>En esta página encontrarás la información general del proyecto MotoGP-Desktop, incluyendo su
-                    propósito y
-                    características principales.</p>
+                <p>Contiene información general sobre el proyecto MotoGP-Desktop, su propósito y funcionalidades principales.</p>
                 <h4>Piloto</h4>
-                <p>En esta página encontrarás información detallada sobre el piloto Somkiat Chantra, incluyendo su
-                    biografía, logros y estadísticas.</p>
+                <p>Información detallada sobre el piloto Somkiat Chantra, su biografía, logros y estadísticas.</p>
                 <h4>Circuito</h4>
-                <p>En esta página encontrarás información sobre el circuito de Silverstone, incluyendo su historia,
-                    características y datos técnicos.</p>
+                <p>Incluye datos del circuito, altimetría (SVG), mapas dinámicos con KML y referencia a documentación XML.</p>
                 <h4>Meteorología</h4>
-                <p>En esta página encontrarás información sobre la meteorología en el circuito de Silverstone,
-                    incluyendo
-                    datos históricos y pronósticos.</p>
+                <p>Proporciona información meteorológica relevante para el circuito, incluyendo históricos y pronósticos.</p>
                 <h4>Clasificaciones</h4>
-                <p>En esta página encontrarás las clasificaciones actuales del Campeonato del Mundo de MotoGP,
-                    incluyendo
-                    las posiciones de los pilotos y equipos.</p>
+                <p>Se muestran los resultados de la carrera y la clasificación del mundial, obtenidos automáticamente desde un archivo XML.</p>
                 <h4>Juegos</h4>
-                <p>En esta página encontrarás una selección de juegos relacionados con MotoGP, incluyendo enlaces para
-                    jugar
-                    en línea o descargar.</p>
+                <p>Contiene juegos relacionados con MotoGP, como el cronómetro y el juego de memoria.</p>
                 <h4>Ayuda</h4>
-                <p>En esta página encontrarás información de ayuda sobre el uso del proyecto MotoGP-Desktop, incluyendo
-                    respuestas a preguntas frecuentes y contacto para soporte adicional.</p>
+                <p>Información sobre el uso de la web, nuevas funcionalidades y guía de navegación.</p>
             </section>
         </section>
 
@@ -68,20 +58,17 @@
             <h3>Inicio</h3>
             <section>
                 <h4>Bienvenida</h4>
-                <p>En esta sección encontrarás un mensaje de bienvenida y una breve introducción a MotoGP Desktop.</p>
-                <p>Se muestra información general sobre la web y sus funcionalidades principales.</p>
+                <p>Mensaje de bienvenida y breve introducción a MotoGP-Desktop, mostrando funcionalidades generales de la web.</p>
             </section>
 
             <section>
                 <h4>Galería de MotoGP</h4>
-                <p>Esta subsección incluye un carrusel de imágenes donde se muestran fotografías relacionadas con las
-                    carreras y los circuitos de MotoGP.</p>
+                <p>Carrusel de imágenes y vídeos relacionados con carreras y circuitos de MotoGP.</p>
             </section>
 
             <section>
                 <h4>Últimas noticias</h4>
-                <p>Aquí se cargan automáticamente las últimas noticias de MotoGP mediante la API de TheNewsAPI, para
-                    mantener al usuario informado sobre los eventos más recientes.</p>
+                <p>Noticias cargadas automáticamente mediante API para mantener al usuario informado sobre eventos recientes.</p>
             </section>
         </section>
 
@@ -89,81 +76,58 @@
             <h3>Piloto</h3>
             <section>
                 <h4>Datos</h4>
-                <p>Aquí encontrarás información personal sobre el piloto Somkiat Chantra, así como detalles relacionados
-                    con
-                    su trayectoria profesional.</p>
-                <p>Además, podrás consultar algunos datos adicionales sobre MotoGP en el glosario.</p>
+                <p>Información personal y profesional de Somkiat Chantra. Incluye datos adicionales de MotoGP en el glosario.</p>
             </section>
 
             <section>
                 <h4>Multimedia</h4>
-                <p>Aquí encontrarás una pequeña recopilación de imágenes y vídeos de Somkiat Chantra, así como un breve
-                    audio relacionado con el glosario.</p>
+                <p>Imágenes, vídeos y audios relacionados con el piloto.</p>
             </section>
         </section>
 
         <section>
             <h3>Circuito</h3>
             <section>
-                <h4>Lectura de archivo HTML del circuito</h4>
-                <p>En <strong>circuito.html</strong> puedes cargar el archivo <em>InfoCircuito.html</em> usando el API File de HTML5. Selecciona el archivo y pulsa “Cargar circuito” para mostrar la información en la página.</p>
+                <h4>Lectura de archivo XML</h4>
+                <p>Se lee <strong>circuitoEsquema.xml</strong> para mostrar información del circuito de manera dinámica.</p>
             </section>
             <section>
-                <h4>Representación gráfica de altimetría (SVG)</h4>
-                <p>Selecciona <em>altimetria.svg</em> para insertar el perfil de altimetrías dentro de la página. El contenido SVG se añade directamente y se adapta al diseño.</p>
+                <h4>Altimetría SVG</h4>
+                <p>Visualización del perfil de altimetrías mediante <em>SVG</em> insertado directamente en la página.</p>
             </section>
             <section>
-                <h4>Uso de mapas dinámicos con KML</h4>
-                <p>Selecciona <em>circuito.kml</em> para visualizar el trazado del circuito sobre el mapa dinámico. Se dibuja la poli-línea del recorrido y se marca el punto de origen.</p>
+                <h4>Mapas dinámicos con KML</h4>
+                <p>Se muestran mapas interactivos con la línea del recorrido del circuito y puntos de origen usando archivos <em>KML</em>.</p>
             </section>
         </section>
 
         <section>
-            <h3>Menú de navegación móvil</h3>
+            <h3>Juegos</h3>
             <section>
-                <h4>Despliegue y accesibilidad</h4>
-                <p>En pantallas pequeñas aparece un botón “☰ Menú” que permite abrir y cerrar la navegación. El botón gestiona <code>aria-expanded</code>, enfoca el primer enlace al abrir, y se puede cerrar con la tecla <kbd>Escape</kbd> o pulsando fuera del encabezado.</p>
+                <h4>Cronómetro</h4>
+                <p>El cronómetro permite medir tiempo en la web de manera precisa. Los resultados se muestran solo al pulsar "Mostrar".</p>
             </section>
             <section>
-                <h4>Validación y estándares</h4>
-                <p>Los estilos usan selectores específicos (estructura y atributos) y las <code>@media</code> contienen comentarios indicando las propiedades redefinidas. Todo el HTML y CSS se valida con las herramientas del W3C sin advertencias (salvo las excepciones documentadas de colores y redefiniciones en <code>@media</code>).</p>
+                <h4>Memoria</h4>
+                <p>Juego de memoria con tarjetas temáticas de MotoGP disponible en <a href="memoria.html">memoria.html</a>.</p>
             </section>
         </section>
-        <section>
-            <h3>Meteorología</h3>
-            <p>En esta sección se proporciona información meteorológica relevante para MotoGP-Desktop.</p>
-            <p>Por ejemplo, se muestran datos de ciudades como Teruel, incluyendo población, país, gentilicio y
-                coordenadas
-                geográficas.</p>
-            <p>Estos datos permiten visualizar información precisa sobre las condiciones y ubicación de las ciudades
-                dentro
-                del proyecto MotoGP-Desktop.</p>
-        </section>
+
         <section>
             <h3>Clasificaciones</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
-                laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in
-                voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <section>
+                <h4>Resultados de la carrera</h4>
+                <p>Se muestran automáticamente el ganador y su tiempo desde el archivo XML.</p>
+                <h4>Clasificación del Mundial</h4>
+                <p>Se listan los pilotos según su posición tras la carrera, obtenidos desde el XML.</p>
+            </section>
         </section>
+
         <section>
-            <h3>Juegos</h3>
-            <p>En esta página encontrarás una selección de juegos relacionados con MotoGP, incluyendo enlaces para jugar
-                en
-                línea o descargar.</p>
-            <p>Entre ellos se incluye el nuevo juego de memoria, disponible en el documento
-                <a href="memoria.html" title="Abrir el juego de memoria">memoria.html</a>,
-                donde podrás poner a prueba tu memoria visual con tarjetas temáticas de MotoGP.
-            </p>
-            <p>Además, se incluye el juego de cronómetro, disponible en el documento
-                <a href="cronometro.html" title="Abrir el juego de cronómetro">cronometro.html</a>,
-                donde podrás medir tu tiempo con precisión.
-            </p>
+            <h3>Meteorología</h3>
+            <p>Información sobre ciudades relevantes para MotoGP, incluyendo población, país, gentilicio y coordenadas geográficas.</p>
         </section>
 
     </main>
-    <script src="js/menu.js"></script>
 </body>
-
 </html>
